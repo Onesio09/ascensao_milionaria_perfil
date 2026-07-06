@@ -164,3 +164,75 @@ font-size:18px;
 }
 
 }
+/* ===== HERO PREMIUM v0.2 ===== */
+
+.badge{
+    display:inline-block;
+    padding:8px 18px;
+    border:1px solid rgba(255,215,0,0.4);
+    color:#FFD700;
+    border-radius:50px;
+    font-size:12px;
+    margin-bottom:20px;
+    letter-spacing:1px;
+}
+
+.buttons{
+    margin-top:30px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.botao-principal{
+    background:#FFD700;
+    color:black;
+    padding:14px 28px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.botao-principal:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 20px rgba(255,215,0,0.4);
+}
+
+.botao-secundario{
+    border:1px solid #FFD700;
+    color:#FFD700;
+    padding:14px 28px;
+    border-radius:30px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.botao-secundario:hover{
+    background:#FFD700;
+    color:black;
+}
+
+.stats{
+    display:flex;
+    gap:40px;
+    margin-top:50px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.stats div{
+    text-align:center;
+}
+
+.stats strong{
+    display:block;
+    font-size:20px;
+    color:#FFD700;
+}
+
+.stats span{
+    font-size:12px;
+    color:#aaa;
+}
