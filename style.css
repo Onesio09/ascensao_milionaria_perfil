@@ -1,1 +1,166 @@
+/* ==========================
+   ASCENSÃO MILIONÁRIA v0.1
+   ========================== */
 
+/* Remove margens padrão */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Configuração geral */
+body{
+    background:#0B0B0B;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Cabeçalho */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:#111;
+
+    border-bottom:1px solid rgba(255,215,0,.2);
+
+    position:sticky;
+    top:0;
+}
+
+/* Nome da marca */
+.logo{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:#FFD700;
+
+}
+
+/* Menu */
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin-left:25px;
+
+    transition:.3s;
+
+}
+
+/* Efeito ao passar o rato */
+nav a:hover{
+
+    color:#FFD700;
+
+}
+
+/* Hero */
+.hero{
+
+    min-height:90vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+/* Título */
+.hero h1{
+
+    font-size:60px;
+
+    max-width:900px;
+
+    margin-bottom:25px;
+
+}
+
+/* Texto */
+.hero p{
+
+    color:#C9C9C9;
+
+    max-width:700px;
+
+    line-height:1.8;
+
+    font-size:20px;
+
+}
+
+/* Botão */
+.botao{
+
+    margin-top:40px;
+
+    background:#FFD700;
+
+    color:black;
+
+    text-decoration:none;
+
+    padding:18px 45px;
+
+    border-radius:50px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+/* Animação do botão */
+.botao:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 25px rgba(255,215,0,.4);
+
+}
+
+/* Telemóveis */
+@media(max-width:768px){
+
+header{
+
+flex-direction:column;
+
+}
+
+nav{
+
+margin-top:20px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+}
