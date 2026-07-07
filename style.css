@@ -236,3 +236,16 @@ font-size:18px;
     font-size:12px;
     color:#aaa;
 }
+.card span{
+
+display:block;
+
+margin-top:15px;
+
+color:#FFD700;
+
+font-size:13px;
+
+font-weight:bold;
+
+}
