@@ -1,72 +1,140 @@
-/* ==========================
-   ASCENSÃO MILIONÁRIA v0.1
-   ========================== */
+/* =====================================================
+   ASCENSÃO MILIONÁRIA
+   STYLE.CSS v1.0
+   Design Premium Preto/Dourado
+===================================================== */
 
-/* Remove margens padrão */
+/* ==========================
+   VARIÁVEIS
+========================== */
+
+:root{
+
+    --bg:#0B0B0B;
+    --bg-card:#141414;
+    --bg-header:#111111;
+
+    --gold:#FFD700;
+    --gold-hover:#F5C400;
+
+    --white:#FFFFFF;
+    --gray:#BFBFBF;
+
+    --radius:18px;
+
+    --transition:.35s ease;
+
+}
+
+/* ==========================
+   RESET
+========================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-/* Configuração geral */
+/* ==========================
+   BODY
+========================== */
+
 body{
-    background:#0B0B0B;
-    color:white;
+
+    background:var(--bg);
+
+    color:var(--white);
+
     font-family:Arial, Helvetica, sans-serif;
+
+    line-height:1.7;
+
 }
 
-/* Cabeçalho */
+/* ==========================
+   HEADER
+========================== */
+
 header{
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 
     padding:20px 8%;
 
-    background:#111;
+    background:var(--bg-header);
 
-    border-bottom:1px solid rgba(255,215,0,.2);
+    border-bottom:1px solid rgba(255,215,0,.15);
 
     position:sticky;
+
     top:0;
+
+    z-index:1000;
+
+    backdrop-filter:blur(10px);
+
 }
 
-/* Nome da marca */
+/* ==========================
+   LOGO
+========================== */
+
 .logo{
+
+    color:var(--gold);
 
     font-size:28px;
 
     font-weight:bold;
 
-    color:#FFD700;
+    letter-spacing:1px;
 
 }
 
-/* Menu */
+/* ==========================
+   MENU
+========================== */
+
+nav{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
 nav a{
 
-    color:white;
+    color:var(--white);
 
     text-decoration:none;
 
-    margin-left:25px;
+    transition:var(--transition);
 
-    transition:.3s;
+    font-size:15px;
 
 }
 
-/* Efeito ao passar o rato */
 nav a:hover{
 
-    color:#FFD700;
+    color:var(--gold);
 
 }
 
-/* Hero */
+/* ==========================
+   HERO
+========================== */
+
 .hero{
 
-    min-height:90vh;
+    min-height:85vh;
 
     display:flex;
 
@@ -78,14 +146,33 @@ nav a:hover{
 
     text-align:center;
 
-    padding:40px;
+    padding:80px 20px;
 
 }
 
-/* Título */
+.badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border:1px solid rgba(255,215,0,.35);
+
+    border-radius:40px;
+
+    color:var(--gold);
+
+    font-size:12px;
+
+    margin-bottom:25px;
+
+    letter-spacing:1px;
+
+}
+
 .hero h1{
 
-    font-size:60px;
+    font-size:58px;
 
     max-width:900px;
 
@@ -93,159 +180,270 @@ nav a:hover{
 
 }
 
-/* Texto */
 .hero p{
 
-    color:#C9C9C9;
+    max-width:750px;
 
-    max-width:700px;
-
-    line-height:1.8;
+    color:var(--gray);
 
     font-size:20px;
 
 }
 
-/* Botão */
-.botao{
+/* ==========================
+   BOTÕES
+========================== */
 
-    margin-top:40px;
+.buttons{
 
-    background:#FFD700;
+    display:flex;
 
-    color:black;
+    justify-content:center;
 
-    text-decoration:none;
+    gap:15px;
 
-    padding:18px 45px;
+    flex-wrap:wrap;
+
+    margin-top:35px;
+
+}
+
+.botao-principal{
+
+    display:inline-block;
+
+    background:var(--gold);
+
+    color:#000;
+
+    padding:16px 34px;
 
     border-radius:50px;
 
+    text-decoration:none;
+
     font-weight:bold;
 
-    transition:.3s;
+    transition:var(--transition);
 
 }
 
-/* Animação do botão */
-.botao:hover{
+.botao-principal:hover{
 
-    transform:translateY(-5px);
+    transform:translateY(-4px);
 
-    box-shadow:0 0 25px rgba(255,215,0,.4);
+    box-shadow:0 0 25px rgba(255,215,0,.35);
 
 }
 
-/* Telemóveis */
+.botao-secundario{
+
+    display:inline-block;
+
+    border:1px solid var(--gold);
+
+    color:var(--gold);
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+}
+
+.botao-secundario:hover{
+
+    background:var(--gold);
+
+    color:#000;
+
+}
+
+/* ==========================
+   ESTATÍSTICAS
+========================== */
+
+.stats{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:35px;
+
+    margin-top:60px;
+
+}
+
+.stats div{
+
+    text-align:center;
+
+}
+
+.stats strong{
+
+    display:block;
+
+    font-size:22px;
+
+    color:var(--gold);
+
+}
+
+.stats span{
+
+    color:var(--gray);
+
+    font-size:13px;
+
+}
+
+/* ==========================
+   SECÇÕES
+========================== */
+
+.tools{
+
+    padding:70px 8%;
+
+}
+
+.tools h2{
+
+    text-align:center;
+
+    color:var(--gold);
+
+    margin-bottom:40px;
+
+    font-size:34px;
+
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.card{
+
+    display:block;
+
+    background:var(--bg-card);
+
+    padding:30px;
+
+    border-radius:var(--radius);
+
+    border:1px solid rgba(255,215,0,.08);
+
+    text-decoration:none;
+
+    color:var(--white);
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(255,215,0,.35);
+
+    box-shadow:0 0 25px rgba(255,215,0,.10);
+
+}
+
+.card h3{
+
+    color:var(--gold);
+
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    color:var(--gray);
+
+}
+
+.card span{
+
+    display:block;
+
+    margin-top:20px;
+
+    color:var(--gold);
+
+    font-size:13px;
+
+    font-weight:bold;
+
+}
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
 @media(max-width:768px){
 
 header{
 
-flex-direction:column;
+    flex-direction:column;
+
+    gap:20px;
 
 }
 
 nav{
 
-margin-top:20px;
+    justify-content:center;
+
+}
+
+.hero{
+
+    min-height:70vh;
 
 }
 
 .hero h1{
 
-font-size:38px;
+    font-size:38px;
 
 }
 
 .hero p{
 
-font-size:18px;
+    font-size:18px;
 
 }
 
+.tools h2{
+
+    font-size:28px;
+
 }
-/* ===== HERO PREMIUM v0.2 ===== */
-
-.badge{
-    display:inline-block;
-    padding:8px 18px;
-    border:1px solid rgba(255,215,0,0.4);
-    color:#FFD700;
-    border-radius:50px;
-    font-size:12px;
-    margin-bottom:20px;
-    letter-spacing:1px;
-}
-
-.buttons{
-    margin-top:30px;
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-.botao-principal{
-    background:#FFD700;
-    color:black;
-    padding:14px 28px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.botao-principal:hover{
-    transform:translateY(-4px);
-    box-shadow:0 0 20px rgba(255,215,0,0.4);
-}
-
-.botao-secundario{
-    border:1px solid #FFD700;
-    color:#FFD700;
-    padding:14px 28px;
-    border-radius:30px;
-    text-decoration:none;
-    transition:0.3s;
-}
-
-.botao-secundario:hover{
-    background:#FFD700;
-    color:black;
-}
-
-.stats{
-    display:flex;
-    gap:40px;
-    margin-top:50px;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-.stats div{
-    text-align:center;
-}
-
-.stats strong{
-    display:block;
-    font-size:20px;
-    color:#FFD700;
-}
-
-.stats span{
-    font-size:12px;
-    color:#aaa;
-}
-.card span{
-
-display:block;
-
-margin-top:15px;
-
-color:#FFD700;
-
-font-size:13px;
-
-font-weight:bold;
 
 }
