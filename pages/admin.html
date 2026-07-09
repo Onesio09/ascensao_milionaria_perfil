@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Painel Administrativo | Ascensão Milionária</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+ASCENSÃO MILIONÁRIA
+</div>
+
+<nav>
+
+<a href="../index.html">🏠 Início</a>
+
+<a href="dashboard.html">📊 Painel do Utilizador</a>
+
+<a href="admin.html">⚙️ Admin</a>
+
+<a href="#" onclick="terminarSessao()">🚪 Sair</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="badge">
+ACESSO RESTRITO
+</div>
+
+<h1>
+Painel Administrativo
+</h1>
+
+<p>
+Gestão de utilizadores e conteúdos da Ascensão Milionária.
+</p>
+
+</section>
+
+<section class="tools">
+
+<h2>Utilizadores Registados</h2>
+
+<div class="card">
+
+<p id="lista-utilizadores">
+A carregar utilizadores...
+</p>
+
+</div>
+
+</section>
+
+<script type="module" src="../firebase-config.js"></script>
+<script type="module" src="../auth.js"></script>
+
+<script type="module">
+import { db, collection, getDocs } from "../firebase-config.js";
+
+async function carregarUtilizadores() {
+  const container = document.getElementById("lista-utilizadores");
+  const snapshot = await getDocs(collection(db, "users"));
+
+  if (snapshot.empty) {
+    container.innerText = "Nenhum utilizador encontrado.";
+    return;
+  }
+
+  let html = "";
+  snapshot.forEach((docSnap) => {
+    const u = docSnap.data();
+    html += `<div style="padding:10px 0; border-bottom:1px solid rgba(255,215,0,.1);">
+      <strong style="color:var(--gold);">${u.name || "Sem nome"}</strong> — ${u.email}
+      ${u.isAdmin ? " · <span style='color:var(--gold);'>Admin</span>" : ""}
+    </div>`;
+  });
+
+  container.innerHTML = html;
+}
+
+carregarUtilizadores();
+</script>
+
+</body>
+
+</html>
