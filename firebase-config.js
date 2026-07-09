@@ -21,15 +21,15 @@ import {
   getDocs
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-// ⚠️ Substitui pelos valores reais do teu projeto Firebase
-// (Consola do Firebase → Definições do Projeto → Os teus apps → SDK config)
+// Configuração real do projeto "ascensao-milionaria"
 const firebaseConfig = {
-  apiKey: "SUA_API_KEY",
-  authDomain: "seu-projeto.firebaseapp.com",
-  projectId: "seu-projeto",
-  storageBucket: "seu-projeto.appspot.com",
-  messagingSenderId: "SEU_SENDER_ID",
-  appId: "SEU_APP_ID"
+  apiKey: "AIzaSyCISgCMjNzTouImMa_JwTi_NzsYhS6-dE8",
+  authDomain: "ascensao-milionaria.firebaseapp.com",
+  projectId: "ascensao-milionaria",
+  storageBucket: "ascensao-milionaria.firebasestorage.app",
+  messagingSenderId: "700963931035",
+  appId: "1:700963931035:web:857c6ff3aee25d6682173e",
+  measurementId: "G-HJBQ03WPCD"
 };
 
 const app = initializeApp(firebaseConfig);
