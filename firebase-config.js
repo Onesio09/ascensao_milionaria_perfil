@@ -2,6 +2,7 @@
 // Configuração e inicialização do Firebase para a Ascensão Milionária
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
 import {
   getAuth,
   signInWithEmailAndPassword,
@@ -33,12 +34,13 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const db = getFirestore(app);
 const googleProvider = new GoogleAuthProvider();
 
 export {
-  auth, db, googleProvider,
+  auth, db, googleProvider, analytics,
   signInWithEmailAndPassword, createUserWithEmailAndPassword,
   signInWithPopup, signOut, onAuthStateChanged,
   doc, setDoc, getDoc, updateDoc, collection, getDocs
