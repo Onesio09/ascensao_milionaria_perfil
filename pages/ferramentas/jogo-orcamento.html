@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jogo do Orçamento | Ascensão Milionária</title>
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+ASCENSÃO MILIONÁRIA
+</div>
+
+<nav>
+
+<a href="../../index.html">🏠 Início</a>
+
+<a href="../recursos.html">📚 Recursos</a>
+
+<a href="../biblioteca.html">📖 Biblioteca</a>
+
+<a href="../academia.html">🎓 Academia</a>
+
+<a href="../ferramentas.html">🛠 Ferramentas</a>
+
+<a href="../comunidade.html">👥 Comunidade</a>
+
+<a href="../contacto.html">📩 Contacto</a>
+
+<a href="../afiliados.html">💼 Afiliados</a>
+
+<a href="../premium.html">👑 Premium</a>
+
+<a href="../login.html">🔑 Entrar</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="badge">
+JOGO GRATUITO
+</div>
+
+<h1>
+Jogo do Orçamento
+</h1>
+
+<p>
+Distribui 100% do teu rendimento pelas categorias e vê se o teu orçamento é saudável.
+</p>
+
+</section>
+
+<section class="tools">
+
+<div class="card" style="max-width:600px; margin:0 auto; text-align:left;">
+
+<p style="text-align:center; margin-bottom:10px; color:var(--gray);">Total distribuído</p>
+<h2 id="totalPercentagem" style="text-align:center; color:var(--gold); margin-bottom:30px;">0%</h2>
+
+<div id="categorias"></div>
+
+<div id="feedback" style="margin-top:25px; padding:16px; border-radius:10px; background:#0B0B0B; border:1px solid rgba(255,215,0,.2); display:none;">
+<p id="feedback-texto"></p>
+</div>
+
+</div>
+
+</section>
+
+<section class="tools">
+
+<h2>🛠 Mais Ferramentas</h2>
+
+<div class="grid">
+
+<a class="card" href="calculadora-juros.html">
+<h3>📈 Calculadora de Juros Compostos</h3>
+<p>Vê o teu dinheiro a crescer ao longo do tempo.</p>
+<span>Calcular →</span>
+</a>
+
+<a class="card" href="quiz-literacia.html">
+<h3>🧠 Quiz de Literacia Financeira</h3>
+<p>Descobre o teu nível financeiro.</p>
+<span>Fazer Quiz →</span>
+</a>
+
+<a class="card" href="simulador-liberdade.html">
+<h3>🕊️ Simulador de Liberdade Financeira</h3>
+<p>Quanto precisas para viver dos teus investimentos.</p>
+<span>Simular →</span>
+</a>
+
+</div>
+
+</section>
+
+<script>
+const categorias = [
+  { nome: "🏠 Habitação", id: "habitacao", valor: 30, recomendado: [25, 35] },
+  { nome: "🍽️ Alimentação", id: "alimentacao", valor: 15, recomendado: [10, 20] },
+  { nome: "🚗 Transporte", id: "transporte", valor: 10, recomendado: [5, 15] },
+  { nome: "🎉 Lazer", id: "lazer", valor: 10, recomendado: [5, 15] },
+  { nome: "💰 Poupança/Investimento", id: "poupanca", valor: 20, recomendado: [20, 30] },
+  { nome: "📋 Outras despesas", id: "outras", valor: 15, recomendado: [5, 15] }
+];
+
+function renderizar() {
+  const container = document.getElementById('categorias');
+  container.innerHTML = '';
+
+  categorias.forEach(cat => {
+    const div = document.createElement('div');
+    div.style.marginBottom = '22px';
+    div.innerHTML = `
+      <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+        <span>${cat.nome}</span>
+        <strong style="color:var(--gold);">${cat.valor}%</strong>
+      </div>
+      <input type="range" min="0" max="60" value="${cat.valor}" id="slider-${cat.id}" style="width:100%;">
+    `;
+    container.appendChild(div);
+  });
+
+  categorias.forEach(cat => {
+    document.getElementById(`slider-${cat.id}`).addEventListener('input', (e) => {
+      cat.valor = parseInt(e.target.value);
+      atualizar();
+    });
+  });
+
+  atualizar();
+}
+
+function atualizar() {
+  const total = categorias.reduce((soma, cat) => soma + cat.valor, 0);
+  document.getElementById('totalPercentagem').innerText = `${total}%`;
+  document.getElementById('totalPercentagem').style.color = total === 100 ? 'var(--gold)' : '#ff6b6b';
+
+  categorias.forEach(cat => {
+    const spans = document.querySelectorAll(`#categorias div`);
+  });
+
+  // Atualizar os valores percentuais visíveis
+  document.querySelectorAll('#categorias > div').forEach((div, i) => {
+    const strong = div.querySelector('strong');
+    strong.innerText = `${categorias[i].valor}%`;
+  });
+
+  const feedbackEl = document.getElementById('feedback');
+  const feedbackTexto = document.getElementById('feedback-texto');
+
+  if (total !== 100) {
+    feedbackEl.style.display = 'block';
+    feedbackTexto.innerText = total < 100
+      ? `Ainda faltam ${100 - total}% para distribuíres.`
+      : `Distribuíste ${total - 100}% a mais. Ajusta os sliders.`;
+    return;
+  }
+
+  feedbackEl.style.display = 'block';
+
+  const poupanca = categorias.find(c => c.id === 'poupanca').valor;
+  const habitacao = categorias.find(c => c.id === 'habitacao').valor;
+
+  if (poupanca >= 20 && habitacao <= 35) {
+    feedbackTexto.innerText = "🎉 Excelente! O teu orçamento está equilibrado e com boa margem de poupança. Estás no caminho certo para construíres ativos.";
+  } else if (poupanca < 10) {
+    feedbackTexto.innerText = "⚠️ A tua poupança está baixa. Tenta libertar mais % de outras categorias para investires no teu futuro.";
+  } else if (habitacao > 40) {
+    feedbackTexto.innerText = "⚠️ A habitação está a consumir uma fatia muito grande do teu orçamento. Isso limita a tua capacidade de poupar e investir.";
+  } else {
+    feedbackTexto.innerText = "👍 O teu orçamento está razoável, mas ainda há espaço para otimizares — tenta aumentar a fatia de poupança/investimento.";
+  }
+}
+
+renderizar();
+</script>
+
+
+<!-- Adsterra Social Bar -->
+<script src="https://pl29816195.effectivecpmnetwork.com/5a/8a/9c/5a8a9cfd6ff59e31c5fd23fefab52842.js"></script>
+
+<!-- Adsterra Popunder -->
+<script src="https://pl29816196.effectivecpmnetwork.com/45/fa/b2/45fab2c4217b776a8a65d54d14c4b3d5.js"></script>
+
+
+<!-- Monetag Popunder + Interstitial (cada um dispara so 1x por visita) -->
+<script>
+(function() {
+  var popKey = 'monetagPopShown';
+  var intKey = 'monetagIntShown';
+
+  document.addEventListener('click', function () {
+    if (!sessionStorage.getItem(popKey)) {
+      sessionStorage.setItem(popKey, '1');
+      window.open('https://omg10.com/4/11263396', '_blank');
+    } else if (!sessionStorage.getItem(intKey)) {
+      sessionStorage.setItem(intKey, '1');
+      window.open('https://omg10.com/4/11263395', '_blank');
+    }
+  });
+})();
+</script>
+
+</body>
+
+</html>

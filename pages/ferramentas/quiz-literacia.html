@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quiz de Literacia Financeira | Ascensão Milionária</title>
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+ASCENSÃO MILIONÁRIA
+</div>
+
+<nav>
+
+<a href="../../index.html">🏠 Início</a>
+
+<a href="../recursos.html">📚 Recursos</a>
+
+<a href="../biblioteca.html">📖 Biblioteca</a>
+
+<a href="../academia.html">🎓 Academia</a>
+
+<a href="../ferramentas.html">🛠 Ferramentas</a>
+
+<a href="../comunidade.html">👥 Comunidade</a>
+
+<a href="../contacto.html">📩 Contacto</a>
+
+<a href="../afiliados.html">💼 Afiliados</a>
+
+<a href="../premium.html">👑 Premium</a>
+
+<a href="../login.html">🔑 Entrar</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="badge">
+QUIZ GRATUITO
+</div>
+
+<h1>
+Quiz de Literacia Financeira
+</h1>
+
+<p>
+Responde a 8 perguntas rápidas e descobre o teu nível financeiro.
+</p>
+
+</section>
+
+<section class="tools">
+
+<div id="quiz-container" class="card" style="max-width:600px; margin:0 auto; text-align:left;">
+
+<p id="pergunta-contador" style="color:var(--gray); font-size:13px; margin-bottom:10px;">Pergunta 1 de 8</p>
+
+<h3 id="pergunta-texto" style="margin-bottom:20px;"></h3>
+
+<div id="opcoes-container"></div>
+
+</div>
+
+<div id="resultado-container" class="card" style="max-width:600px; margin:0 auto; text-align:center; display:none;">
+
+<h2 id="resultado-nivel" style="color:var(--gold); margin-bottom:15px;"></h2>
+
+<p id="resultado-texto" style="margin-bottom:25px;"></p>
+
+<button onclick="partilhar()" class="botao-principal" style="border:none; cursor:pointer; margin-bottom:12px;">
+Copiar Resultado para Partilhar
+</button>
+
+<br>
+
+<button onclick="reiniciar()" class="botao-secundario" style="border:none; cursor:pointer; background:transparent;">
+Refazer o Quiz
+</button>
+
+</div>
+
+</section>
+
+<section class="tools">
+
+<h2>🛠 Mais Ferramentas</h2>
+
+<div class="grid">
+
+<a class="card" href="calculadora-juros.html">
+<h3>📈 Calculadora de Juros Compostos</h3>
+<p>Vê o teu dinheiro a crescer ao longo do tempo.</p>
+<span>Calcular →</span>
+</a>
+
+<a class="card" href="simulador-liberdade.html">
+<h3>🕊️ Simulador de Liberdade Financeira</h3>
+<p>Quanto precisas para viver dos teus investimentos.</p>
+<span>Simular →</span>
+</a>
+
+<a class="card" href="jogo-orcamento.html">
+<h3>🎮 Jogo do Orçamento</h3>
+<p>Distribui o teu rendimento e recebe feedback.</p>
+<span>Jogar →</span>
+</a>
+
+</div>
+
+</section>
+
+<script>
+const perguntas = [
+  {
+    texto: "Com que frequência acompanhas as tuas despesas mensais?",
+    opcoes: ["Nunca", "Às vezes", "Todos os meses", "Diariamente, com registo detalhado"]
+  },
+  {
+    texto: "Tens uma reserva de emergência (3-6 meses de despesas)?",
+    opcoes: ["Não tenho nenhuma", "Tenho um pouco, menos de 1 mês", "Tenho 1-3 meses", "Tenho 3+ meses"]
+  },
+  {
+    texto: "O que fazes quando recebes dinheiro extra (bónus, prenda)?",
+    opcoes: ["Gasto quase tudo", "Gasto uma parte, poupo o resto", "Poupo a maior parte", "Invisto quase tudo"]
+  },
+  {
+    texto: "Sabes qual é a diferença entre ativo e passivo?",
+    opcoes: ["Não", "Mais ou menos", "Sim, sei explicar", "Sim, e aplico isso nas minhas decisões"]
+  },
+  {
+    texto: "Tens algum investimento (ações, fundos, imóveis, etc.)?",
+    opcoes: ["Não", "Estou a pensar nisso", "Tenho um pouco", "Tenho e invisto regularmente"]
+  },
+  {
+    texto: "Como classificarias o teu nível de dívidas atuais?",
+    opcoes: ["Dívidas altas e sem plano", "Algumas dívidas, sem plano claro", "Dívidas controladas com plano", "Sem dívidas ou só dívidas estratégicas"]
+  },
+  {
+    texto: "Tens metas financeiras claras para os próximos 5 anos?",
+    opcoes: ["Não", "Tenho ideias vagas", "Tenho metas mas não escritas", "Tenho metas claras e escritas"]
+  },
+  {
+    texto: "Com que frequência aprendes sobre finanças (livros, cursos, artigos)?",
+    opcoes: ["Nunca", "Raramente", "Algumas vezes por mês", "Regularmente, é um hábito"]
+  }
+];
+
+let perguntaAtual = 0;
+let pontuacao = 0;
+
+function mostrarPergunta() {
+  const p = perguntas[perguntaAtual];
+  document.getElementById('pergunta-contador').innerText = `Pergunta ${perguntaAtual + 1} de ${perguntas.length}`;
+  document.getElementById('pergunta-texto').innerText = p.texto;
+
+  const container = document.getElementById('opcoes-container');
+  container.innerHTML = '';
+
+  p.opcoes.forEach((opcao, index) => {
+    const btn = document.createElement('button');
+    btn.innerText = opcao;
+    btn.className = 'botao-secundario';
+    btn.style.cssText = 'display:block; width:100%; text-align:left; margin-bottom:12px; border:1px solid rgba(255,215,0,.2); cursor:pointer; background:transparent;';
+    btn.onclick = () => responder(index);
+    container.appendChild(btn);
+  });
+}
+
+function responder(pontos) {
+  pontuacao += pontos;
+  perguntaAtual++;
+
+  if (perguntaAtual < perguntas.length) {
+    mostrarPergunta();
+  } else {
+    mostrarResultado();
+  }
+}
+
+function mostrarResultado() {
+  document.getElementById('quiz-container').style.display = 'none';
+  document.getElementById('resultado-container').style.display = 'block';
+
+  const maxPontos = perguntas.length * 3;
+  const percentagem = pontuacao / maxPontos;
+
+  let nivel, texto;
+
+  if (percentagem < 0.35) {
+    nivel = "🌱 Nível Sobrevivência";
+    texto = "Estás no início da tua jornada financeira. O primeiro passo é criar consciência sobre onde vai o teu dinheiro. A Academia da Ascensão Milionária tem o percurso certo para ti.";
+  } else if (percentagem < 0.6) {
+    nivel = "📊 Nível Estabilidade";
+    texto = "Já tens algumas boas práticas, mas ainda há espaço para organizares melhor a tua vida financeira e criares uma base mais sólida.";
+  } else if (percentagem < 0.85) {
+    nivel = "🚀 Nível Crescimento";
+    texto = "Estás no bom caminho! Já pensas em investimentos e metas. Agora é altura de acelerar e diversificar as tuas fontes de rendimento.";
+  } else {
+    nivel = "👑 Nível Elite";
+    texto = "Tens uma mentalidade financeira sólida! Já pensas como investidor e planeias a longo prazo. Continua a evoluir e a criar ativos.";
+  }
+
+  document.getElementById('resultado-nivel').innerText = nivel;
+  document.getElementById('resultado-texto').innerText = texto;
+}
+
+function reiniciar() {
+  perguntaAtual = 0;
+  pontuacao = 0;
+  document.getElementById('resultado-container').style.display = 'none';
+  document.getElementById('quiz-container').style.display = 'block';
+  mostrarPergunta();
+}
+
+function partilhar() {
+  const nivel = document.getElementById('resultado-nivel').innerText;
+  const texto = `Acabei de fazer o Quiz de Literacia Financeira da Ascensão Milionária e o meu resultado foi: ${nivel}\n\nFaz o teu também: https://onesio09.github.io/ascensao_milionaria_perfil/pages/quiz-literacia.html`;
+  navigator.clipboard.writeText(texto);
+  alert("Resultado copiado! Já podes colar e partilhar.");
+}
+
+mostrarPergunta();
+</script>
+
+
+<!-- Adsterra Social Bar -->
+<script src="https://pl29816195.effectivecpmnetwork.com/5a/8a/9c/5a8a9cfd6ff59e31c5fd23fefab52842.js"></script>
+
+<!-- Adsterra Popunder -->
+<script src="https://pl29816196.effectivecpmnetwork.com/45/fa/b2/45fab2c4217b776a8a65d54d14c4b3d5.js"></script>
+
+
+<!-- Monetag Popunder + Interstitial (cada um dispara so 1x por visita) -->
+<script>
+(function() {
+  var popKey = 'monetagPopShown';
+  var intKey = 'monetagIntShown';
+
+  document.addEventListener('click', function () {
+    if (!sessionStorage.getItem(popKey)) {
+      sessionStorage.setItem(popKey, '1');
+      window.open('https://omg10.com/4/11263396', '_blank');
+    } else if (!sessionStorage.getItem(intKey)) {
+      sessionStorage.setItem(intKey, '1');
+      window.open('https://omg10.com/4/11263395', '_blank');
+    }
+  });
+})();
+</script>
+
+</body>
+
+</html>
