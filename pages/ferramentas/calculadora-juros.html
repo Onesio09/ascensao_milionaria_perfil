@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculadora de Juros Compostos | Ascensão Milionária</title>
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+ASCENSÃO MILIONÁRIA
+</div>
+
+<nav>
+
+<a href="../../index.html">🏠 Início</a>
+
+<a href="../recursos.html">📚 Recursos</a>
+
+<a href="../biblioteca.html">📖 Biblioteca</a>
+
+<a href="../academia.html">🎓 Academia</a>
+
+<a href="../ferramentas.html">🛠 Ferramentas</a>
+
+<a href="../comunidade.html">👥 Comunidade</a>
+
+<a href="../contacto.html">📩 Contacto</a>
+
+<a href="../afiliados.html">💼 Afiliados</a>
+
+<a href="../premium.html">👑 Premium</a>
+
+<a href="../login.html">🔑 Entrar</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="badge">
+FERRAMENTA GRATUITA
+</div>
+
+<h1>
+Calculadora de Juros Compostos
+</h1>
+
+<p>
+Descobre quanto o teu dinheiro pode crescer ao longo do tempo.
+</p>
+
+</section>
+
+<section class="tools">
+
+<div class="card" style="max-width:600px; margin:0 auto; text-align:left;">
+
+<label style="display:block; margin-bottom:6px; color:var(--gray);">Valor inicial (€)</label>
+<input type="number" id="valorInicial" value="1000" style="width:100%; padding:12px; margin-bottom:18px; border-radius:8px; border:1px solid rgba(255,215,0,.2); background:#0B0B0B; color:#fff;">
+
+<label style="display:block; margin-bottom:6px; color:var(--gray);">Aporte mensal (€)</label>
+<input type="number" id="aporteMensal" value="100" style="width:100%; padding:12px; margin-bottom:18px; border-radius:8px; border:1px solid rgba(255,215,0,.2); background:#0B0B0B; color:#fff;">
+
+<label style="display:block; margin-bottom:6px; color:var(--gray);">Taxa de juros anual (%)</label>
+<input type="number" id="taxaAnual" value="8" step="0.1" style="width:100%; padding:12px; margin-bottom:18px; border-radius:8px; border:1px solid rgba(255,215,0,.2); background:#0B0B0B; color:#fff;">
+
+<label style="display:block; margin-bottom:6px; color:var(--gray);">Período (anos)</label>
+<input type="number" id="anos" value="10" style="width:100%; padding:12px; margin-bottom:24px; border-radius:8px; border:1px solid rgba(255,215,0,.2); background:#0B0B0B; color:#fff;">
+
+<button onclick="calcular()" class="botao-principal" style="width:100%; border:none; cursor:pointer;">
+Calcular
+</button>
+
+<div id="resultado" style="display:none; margin-top:30px;">
+
+<div style="padding:16px; background:#0B0B0B; border-radius:10px; border:1px solid rgba(255,215,0,.2); margin-bottom:12px;">
+<span style="color:var(--gray); font-size:13px;">VALOR FINAL</span><br>
+<strong id="valorFinal" style="color:var(--gold); font-size:28px;"></strong>
+</div>
+
+<div style="display:flex; gap:12px;">
+<div style="flex:1; padding:14px; background:#0B0B0B; border-radius:10px; border:1px solid rgba(255,215,0,.1);">
+<span style="color:var(--gray); font-size:12px;">TOTAL INVESTIDO</span><br>
+<strong id="totalInvestido" style="color:#fff;"></strong>
+</div>
+<div style="flex:1; padding:14px; background:#0B0B0B; border-radius:10px; border:1px solid rgba(255,215,0,.1);">
+<span style="color:var(--gray); font-size:12px;">JUROS GANHOS</span><br>
+<strong id="jurosGanhos" style="color:var(--gold);"></strong>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="tools">
+
+<h2>🛠 Mais Ferramentas</h2>
+
+<div class="grid">
+
+<a class="card" href="quiz-literacia.html">
+<h3>🧠 Quiz de Literacia Financeira</h3>
+<p>Descobre o teu nível financeiro.</p>
+<span>Fazer Quiz →</span>
+</a>
+
+<a class="card" href="simulador-liberdade.html">
+<h3>🕊️ Simulador de Liberdade Financeira</h3>
+<p>Quanto precisas para viver dos teus investimentos.</p>
+<span>Simular →</span>
+</a>
+
+<a class="card" href="jogo-orcamento.html">
+<h3>🎮 Jogo do Orçamento</h3>
+<p>Distribui o teu rendimento e recebe feedback.</p>
+<span>Jogar →</span>
+</a>
+
+</div>
+
+</section>
+
+<script>
+function formatarEuro(valor) {
+  return valor.toLocaleString('pt-PT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
+}
+
+function calcular() {
+  const inicial = parseFloat(document.getElementById('valorInicial').value) || 0;
+  const aporte = parseFloat(document.getElementById('aporteMensal').value) || 0;
+  const taxaAnual = parseFloat(document.getElementById('taxaAnual').value) || 0;
+  const anos = parseInt(document.getElementById('anos').value) || 0;
+
+  const taxaMensal = taxaAnual / 100 / 12;
+  const meses = anos * 12;
+
+  let saldo = inicial;
+  let totalAportado = inicial;
+
+  for (let i = 0; i < meses; i++) {
+    saldo = saldo * (1 + taxaMensal) + aporte;
+    totalAportado += aporte;
+  }
+
+  const juros = saldo - totalAportado;
+
+  document.getElementById('valorFinal').innerText = formatarEuro(saldo);
+  document.getElementById('totalInvestido').innerText = formatarEuro(totalAportado);
+  document.getElementById('jurosGanhos').innerText = formatarEuro(juros);
+  document.getElementById('resultado').style.display = 'block';
+}
+
+calcular();
+</script>
+
+
+<!-- Adsterra Social Bar -->
+<script src="https://pl29816195.effectivecpmnetwork.com/5a/8a/9c/5a8a9cfd6ff59e31c5fd23fefab52842.js"></script>
+
+<!-- Adsterra Popunder -->
+<script src="https://pl29816196.effectivecpmnetwork.com/45/fa/b2/45fab2c4217b776a8a65d54d14c4b3d5.js"></script>
+
+
+<!-- Monetag Popunder + Interstitial (cada um dispara so 1x por visita) -->
+<script>
+(function() {
+  var popKey = 'monetagPopShown';
+  var intKey = 'monetagIntShown';
+
+  document.addEventListener('click', function () {
+    if (!sessionStorage.getItem(popKey)) {
+      sessionStorage.setItem(popKey, '1');
+      window.open('https://omg10.com/4/11263396', '_blank');
+    } else if (!sessionStorage.getItem(intKey)) {
+      sessionStorage.setItem(intKey, '1');
+      window.open('https://omg10.com/4/11263395', '_blank');
+    }
+  });
+})();
+</script>
+
+<footer>
+© 2026 Ascensão Milionária. Todos os direitos reservados. |
+<a href="../privacidade.html">Política de Privacidade</a> |
+<a href="../termos.html">Termos de Uso</a>
+</footer>
+
+</body>
+
+</html>
