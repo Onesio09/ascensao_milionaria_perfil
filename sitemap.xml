@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/recursos.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/biblioteca.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/academia.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/ferramentas.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/comunidade.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/sobre.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/contacto.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/recursos.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/educacao-financeira.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/poupanca.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/orcamento.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/habitos.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/lideranca.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/escala.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/impacto.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/ecossistema.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/ia.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/afiliados-1.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/academia.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/mentalidade.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/crescimento.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/estabilidade.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/liberdade.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/elite.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/ferramentas.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/ferramentas/calculadora-juros.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/ferramentas/simulador-liberdade.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/ferramentas/quiz-literacia.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/ferramentas/jogo-orcamento.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/comunidade.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/premium.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/afiliados.html</loc></url>
+  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/contacto.html</loc></url>
 </urlset>
