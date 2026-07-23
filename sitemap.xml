@@ -1,31 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/recursos.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/educacao-financeira.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/poupanca.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/orcamento.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/habitos.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/lideranca.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/escala.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/impacto.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/ecossistema.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/ia.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/afiliados-1.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/academia.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/mentalidade.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/crescimento.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/estabilidade.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/liberdade.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/elite.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/ferramentas.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/ferramentas/calculadora-juros.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/ferramentas/simulador-liberdade.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/ferramentas/quiz-literacia.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/ferramentas/jogo-orcamento.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/comunidade.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/premium.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/afiliados.html</loc></url>
-  <url><loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/contacto.html</loc></url>
+  <!-- Homepage - Máxima Prioridade -->
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Páginas Principais - Alta Prioridade -->
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/recursos.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Biblioteca - Conteúdo Educacional -->
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/educacao-financeira.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/poupanca.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/orcamento.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/habitos.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/lideranca.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/escala.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/impacto.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/ecossistema.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/ia.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/biblioteca/afiliados-1.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Trilhas de Aprendizado -->
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/academia.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/mentalidade.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/crescimento.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/estabilidade.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/liberdade.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/elite.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Ferramentas Interativas -->
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/ferramentas.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/ferramentas/calculadora-juros.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/ferramentas/simulador-liberdade.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/ferramentas/quiz-literacia.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/ferramentas/jogo-orcamento.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Páginas de Conversão e Engajamento -->
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/comunidade.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/premium.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/afiliados.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://onesio09.github.io/ascensao_milionaria_perfil/pages/contacto.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
